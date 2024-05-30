@@ -1,3 +1,9 @@
+@font-face {
+	font-family: Monarda;
+	src: url('./Monarda.ttf');
+}
+
+
 .card-product{
     display: flex;
     align-items: center;

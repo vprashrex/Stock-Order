@@ -10,17 +10,17 @@ import { Login } from './components/Login';
 import {SaleOrders} from "./components/SaleOrder";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-
+import Nav from './components/NavBar';
+import { PrivateRoute } from './components/PrivateRoute';
 function App() {
 
   return (
     <ChakraProvider theme={theme}>
-      
+      <Nav/>
       <Box textAlign="center" fontSize="xl">
-        <ColorModeSwitcher justifySelf="flex-end" />
         <Routes>
           <Route path="/" element={<Login/>}/>
-          <Route path="/dashboard" element={<SaleOrders/>}/>
+          <Route path="/dashboard" element={<PrivateRoute Component={<SaleOrders/>}/>}/>
         </Routes>
       </Box>
     </ChakraProvider>

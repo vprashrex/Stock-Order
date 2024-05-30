@@ -5,18 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom'
+import { AuthContext } from "./context/AuthContext";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
 root.render(
-  <StrictMode>
+  <AuthContext>
     <BrowserRouter>
       <ColorModeScript />
       <App />
+      <ToastContainer/>
     </BrowserRouter>
     
-  </StrictMode>
+  </AuthContext>
 );
 
 // If you want your app to work offline and load faster, you can change
