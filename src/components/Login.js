@@ -32,25 +32,28 @@ export const Login = () => {
 
   return (
     <Flex height="100vh" alignItems="center" justifyContent="center">
-        <Box width="md" mx="auto" mt={10} p={6} borderWidth={1} borderRadius="lg" boxShadow="lg">
-            <Heading as="h1" mb={6} textAlign="center">
-            Login
-            </Heading>
-            <form onSubmit={handleSubmit}>
-              <VStack spacing={4}>
-                <FormControl id="username">
-                  <FormLabel>Username</FormLabel>
-                  <Input type="name" ref={username} required />
-                </FormControl>
-                <FormControl id="password">
-                  <FormLabel>Password</FormLabel>
-                  <Input type="password" ref={password} required />
-                </FormControl>
-                  <Button type="submit" colorScheme="teal" width="full">
-                    Login
-                  </Button>
-              </VStack>
-            </form>
+
+      <Box width="md" mx="auto" mt={10} p={6} borderWidth={1} borderRadius="lg" boxShadow="lg">
+        <Heading as="h1" mb={6} textAlign="center">
+          Login
+          
+          </Heading>
+          <form onSubmit={handleSubmit}>
+            <VStack spacing={4}>
+              <FormControl id="username">
+                <FormLabel>Username</FormLabel>
+                <Input type="name" ref={username} required />
+              </FormControl>
+              <FormControl id="password">
+                <FormLabel>Password</FormLabel>
+                <Input type="password" ref={password} required />
+              </FormControl>
+              <Button type="submit" colorScheme="teal" width="full">
+                Login
+              </Button>
+            </VStack>
+            <p style={{marginTop:"30px"}}>username: admin password: admin</p>
+          </form>
         </Box>
     </Flex>
   );

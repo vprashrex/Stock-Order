@@ -17,6 +17,8 @@ function App() {
   return (
     <ChakraProvider theme={theme}>
       <Nav/>
+      <Box>
+      </Box>
       <Box textAlign="center" fontSize="xl">
         <Routes>
           <Route path="/" element={<Login/>}/>
